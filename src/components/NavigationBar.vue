@@ -6,8 +6,8 @@
       </li>
     </ul>
     <ul id="right">
-      <li class="button">
-        <a href="#">LOGIN</a>
+      <li>
+        <a href="#"><square-button name="LOGIN"/></a>
       </li>
     </ul>
   </div>
@@ -46,7 +46,7 @@ export default {
 
 #navigation-bar ul#right {
   position: fixed;
-  right: 40px;
+  right: 30px;
   margin: 0;
   list-style-type: none;
 }
@@ -62,19 +62,5 @@ export default {
 
 #navigation-bar ul li.primary {
   font-weight: bold;
-}
-
-#navigation-bar ul li.button {
-  margin: 0 7px;
-  padding: 0 14px;
-  font-size: 14px;
-  line-height: 36px;
-  border: #212121 2px solid;
-}
-
-#navigation-bar ul li.button:hover {
-  background-color: #212121;
-  color: #FAFAFA;
-  text-decoration: underline;
 }
 </style>

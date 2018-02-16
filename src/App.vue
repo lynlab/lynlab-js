@@ -12,8 +12,6 @@ export default {
 </script>
 
 <style>
-@import url(https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
-
 body {
   margin: 0;
 }
@@ -22,7 +20,6 @@ body {
   font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #FAFAFA;
   color: #212121;
 }
 
