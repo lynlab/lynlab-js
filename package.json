@@ -15,6 +15,7 @@
     "axios": "^0.17.1",
     "marked": "^0.3.15",
     "vue": "^2.5.2",
+    "vue-cookie": "^1.1.4",
     "vue-disqus": "^2.0.4",
     "vue-i18n": "^7.4.2",
     "vue-router": "^3.0.1"

@@ -1,6 +1,7 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue';
+import VueCookie from 'vue-cookie';
 import App from './App';
 import router from './router';
 import i18n from './i18n';
@@ -10,6 +11,8 @@ import SquareButton from './components/ui/SquareButton';
 import ErrorView from './components/ErrorView';
 import LoadingView from './components/LoadingView';
 import NavigationBar from './components/NavigationBar';
+
+Vue.use(VueCookie);
 
 Vue.config.productionTip = false;
 Vue.component('square-button', SquareButton);

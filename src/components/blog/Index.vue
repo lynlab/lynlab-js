@@ -2,7 +2,7 @@
   <div id="blog-index">
     <div class="post container" v-for="post in posts" v-bind:key="post.id">
       <h1 id="post-title"><router-link :to="{ name: 'BlogPost', params: { id: post.id } }">{{ post.title }}</router-link></h1>
-      <p id="post-meta">{{ $d(Date.parse(post.createdAt)) }} | {{ post.postCategory.name }}</p>
+      <p id="post-meta"><i class="far fa-clock"></i> {{ $d(Date.parse(post.createdAt)) }} · <i class="far fa-folder"></i> {{ post.postCategory.name }}</p>
       <p>{{ post.summary }}</p>
     </div>
     <p id="load-more" v-if="!loading" v-on:click="loadPosts()">
