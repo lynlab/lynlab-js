@@ -4,8 +4,10 @@
       <h1 id="post-title">{{ post.title }}</h1>
       <p id="post-meta">
         <i class="far fa-clock"></i> {{ $d(Date.parse(post.createdAt)) }}
-         · <i class="far fa-folder"></i> {{ post.postCategory.name }}
-         · <i class="fas fa-users"></i> {{ post.hitCount }}</p>
+        <span v-if="post.postSeries"> · <i class="fas fa-list-ul"></i> <a :href="'/blog?filter=postSeriesId:' + post.postSeries.id">{{ post.postSeries.name }} 시리즈</a></span>
+         · <i class="far fa-folder"></i> <a :href="'/blog?filter=postCategoryId:' + post.postCategory.id">{{ post.postCategory.name }}</a>
+         · <i class="fas fa-users"></i> {{ post.hitCount }}
+      </p>
       <div id="post-body" v-html="marked(post.body)"></div>
       <div class="addthis_inline_share_toolbox"></div>
       <div id="post-comments">
@@ -64,10 +66,15 @@ export default {
 </style>
 
 <style>
+#post-series {
+  border: #E0E0E0 solid 1px;
+  padding: 10px 20px;
+}
+
 #post-body {
   margin: 50px 0 100px 0;
   text-align: left;
-  line-height: 1.75;
+  line-height: 2.0;
 }
 
 #post-body a {

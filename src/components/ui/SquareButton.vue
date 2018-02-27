@@ -14,7 +14,6 @@ export default {
 <style>
 #square-button {
   background-color: #00000000;
-  margin: 0 7px;
   padding: 0 14px;
   font-size: 14px;
   line-height: 36px;
