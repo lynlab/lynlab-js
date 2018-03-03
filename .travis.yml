@@ -1,0 +1,33 @@
+language: node_js
+node_js:
+  - "8"
+
+cache: yarn
+
+install:
+  - yarn
+
+script:
+  - yarn lint
+  - yarn build
+
+deploy:
+  - on:
+      branch: develop
+    provider: s3
+    access_key_id: ${AWS_ACCESS_KEY_ID}
+    secret_access_key: ${AWS_SECRET_ACCESS_KEY}
+    bucket: "stage.lynlab.co.kr"
+    region: ap-northeast-2
+    skip_cleanup: true
+    local_dir: dist
+  - on:
+      branch: master
+    provider: s3
+    access_key_id: ${AWS_ACCESS_KEY_ID}
+    secret_access_key: ${AWS_SECRET_ACCESS_KEY}
+    bucket: "lynlab.co.kr"
+    region: ap-northeast-2
+    skip_cleanup: true
+    local_dir: dist
+    cache_control: "max-age=28800"

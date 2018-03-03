@@ -1,6 +1,13 @@
 # lynlab-js
 
+[![Build Status](https://travis-ci.org/lynlab/lynlab-js.svg?branch=master)](https://travis-ci.org/lynlab/lynlab-js)
+
 > My personal blog (and more)
+
+## Prerequisites
+
+* nodejs 8.X
+* yarn
 
 ## Build Setup
 
@@ -24,4 +31,6 @@ yarn run unit
 yarn test
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## Environment variables
+
+  - `LYNLAB_BACKEND_HOST`
