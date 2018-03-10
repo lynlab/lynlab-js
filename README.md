@@ -31,6 +31,13 @@ yarn run unit
 yarn test
 ```
 
+## Deployment
+
+```bash
+docker build -t lynlab/lynlab-js .
+docker run -e 'LYNLAB_BACKEND_HOST=...' -p 8080:80 -d lynlab/lynlab-js
+```
+
 ## Environment variables
 
   - `LYNLAB_BACKEND_HOST`
